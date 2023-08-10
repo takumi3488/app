@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "pkg/grpc";
+
+package notice;
+
+service NoticeService {
+    rpc Notice (NoticeRequest) returns (NoticeResponse);
+}
+
+message NoticeRequest {
+    string type = 1;
+    string content = 2;
+}
+
+message NoticeResponse {
+    bool ok = 1;
+}

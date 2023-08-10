@@ -1,0 +1,2 @@
+#!/bin/sh
+echo '{"type": "line", "content": "test"}' | grpcurl -k call localhost:8080 notice.NoticeService.Notice
