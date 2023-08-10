@@ -14,4 +14,13 @@ gRPCでの各種チャットアプリやSNSのBotへメッセージを送信す�
 
 ## 使い方
 
-Dockerイメージを準備中です。
+起動
+
+```
+docker run -d --restart unless-stopped -p 8080:8080 \
+  -e LINE_TOKEN=<YOUR_LINE_TOKEN> \
+  -e LINE_TO=<YOUR_LINE_ACCOUNT_ID> \
+  takumi3488/notice_bot_for_grpc
+```
+
+メソッドは `pkg/grpc/notice.proto` を確認してください。
